@@ -16,11 +16,11 @@ export default function Home() {
       <Header />
 
       <div className="grid grid-cols-12 md:gap-x-3  h-screen">
-        <div className="md:col-span-2 hidden md:block">
+        <div className="xl:col-span-2 md:col-span-1 hidden md:block">
           <SideBar />
         </div>
 
-        <div className="md:col-span-10 md:ml-8 col-span-12">
+        <div className="xl:col-span-10 md:col-span-11 md:ml-8 col-span-12">
           <DashboardMain
             score={score}
             setScore={setScore}

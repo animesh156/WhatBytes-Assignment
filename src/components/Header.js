@@ -3,7 +3,7 @@
 
 export default function Header() {
     return (
-      <header className="border-b border-gray-200 px-3 py-2 flex justify-between ">
+      <header className="border-b text-black border-gray-200 px-3 py-2 flex justify-between ">
 
         <div className="mb-2 flex items-center">
           <img src="./logo.png" alt="logo_img" className="w-12" />

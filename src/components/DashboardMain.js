@@ -97,7 +97,7 @@ export default function DashboardMain({ rank, setRank, score, setScore, percenti
 
   return (
     <>
-      <div className="flex flex-col md:flex-row md:justify-around md:gap-x-2">
+      <div className="flex flex-col items-center xl:flex-row xl:justify-around md:gap-x-2">
         {/* Left part */}
         <div className="flex flex-col items-center md:items-start md:-ml-4 p-2.5 text-black">
           <h1 className="mt-4 font-normal">Skill Test</h1>
@@ -135,7 +135,7 @@ export default function DashboardMain({ rank, setRank, score, setScore, percenti
       {/* Modal Component */}
 
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div className="fixed inset-0 text-black z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-white/50"></div>
           {/* Modal content */}
           <div className="relative bg-white p-3 rounded-md shadow-xl border border-gray-300 w-[355px] md:p-6 md:w-full md:max-w-lg">

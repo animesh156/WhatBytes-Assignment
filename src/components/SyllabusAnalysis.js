@@ -2,7 +2,7 @@
 
 export default function SyllabusAnalysis() {
     return (
-        <div className="border -mt-4 lg:w-[380px] p-5 w-[350px] text-black rounded-md border-gray-300">
+        <div className="border -mt-4 md:w-[400px] p-5 w-[350px] text-black rounded-md border-gray-300">
 
             <h1 className="font-bold text-sm">Syllabus Wise Analysis</h1>
 
