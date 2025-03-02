@@ -149,7 +149,7 @@ export default function DashboardMain({
       {/* Modal Component */}
 
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div className="fixed text-black inset-0 z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-white/50"></div>
           {/* Modal content */}
           <div className="relative bg-white p-3 rounded-md shadow-xl border border-gray-300 w-[355px] md:p-6 md:w-full md:max-w-lg">
