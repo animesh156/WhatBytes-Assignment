@@ -18,7 +18,7 @@ export default function Header() {
           </div>
         </div>
 
-        <p className="text-[13px] font-bold">Rahil Siddique</p>
+        <p className="text-[13px] text-black font-bold">Rahil Siddique</p>
       </div>
     </header>
   );
