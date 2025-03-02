@@ -2,9 +2,11 @@
 
 import { HiMiniTrophy } from "react-icons/hi2";
 
-export default function QuickStatistics() {
+export default function QuickStatistics({rank, percentile, score}) {
+ console.log(rank)
+
   return (
-    <div className="border mt-5 p-1.5 py-4 border-gray-300 max-w-xl">
+    <div className="border mt-4 text-black p-1.5 py-4 rounded-md border-gray-300 lg:w-[556px]">
       <h1 className="font-bold -mt-3 ml-4">Quick Statistics</h1>
 
       <div className="justify-around gap-x-3 mt-2 flex rounded-md  items-center  ">
@@ -14,8 +16,8 @@ export default function QuickStatistics() {
           </div>
 
           <div className="flex flex-col">
-            <p className="font-extrabold">1</p>
-            <p>Your Rank</p>
+            <p className="font-extrabold">{rank}</p>
+            <p className="font-normal text-xs text-gray-600">YOUR RANK</p>
           </div>
         </div>
 
@@ -25,8 +27,8 @@ export default function QuickStatistics() {
           </div>
 
           <div className="flex flex-col">
-            <p className="font-extrabold">30%</p>
-            <p>PERCENTILE</p>
+            <p className="font-extrabold">{percentile}%</p>
+            <p className="text-xs text-gray-600">PERCENTILE</p>
           </div>
         </div>
 
@@ -36,8 +38,8 @@ export default function QuickStatistics() {
           </div>
 
           <div className="flex flex-col">
-            <p className="font-extrabold">10/15</p>
-            <p >CORRECT ANSWERS</p>
+            <p className="font-extrabold">{score}/15</p>
+            <p className="text-xs text-gray-600">CORRECT ANSWERS</p>
           </div>
         </div>
       </div>
