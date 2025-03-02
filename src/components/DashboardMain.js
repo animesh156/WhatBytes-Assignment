@@ -7,9 +7,16 @@ import QuickStatistics from "./QuickStatistics";
 import StudentChart from "./StudentChart";
 import SyllabusAnalysis from "./SyllabusAnalysis";
 
-export default function DashboardMain({ rank, setRank, score, setScore, percentile, setPercentile }) {
+export default function DashboardMain({
+  rank,
+  setRank,
+  score,
+  setScore,
+  percentile,
+  setPercentile,
+}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+
   // Temporary states for modal inputs
   const [localRank, setLocalRank] = useState(rank);
   const [localScore, setLocalScore] = useState(score);
@@ -92,8 +99,13 @@ export default function DashboardMain({ rank, setRank, score, setScore, percenti
     setIsModalOpen(true);
   };
 
-  const isSaveDisabled = rankError || percentileError || scoreError || 
-                         localRank === "" || localPercentile === "" || localScore === "";
+  const isSaveDisabled =
+    rankError ||
+    percentileError ||
+    scoreError ||
+    localRank === "" ||
+    localPercentile === "" ||
+    localScore === "";
 
   return (
     <>
@@ -103,10 +115,16 @@ export default function DashboardMain({ rank, setRank, score, setScore, percenti
           <h1 className="mt-4 font-normal">Skill Test</h1>
 
           <div className="border mt-6 px-2 border-gray-300 justify-around gap-x-2 flex rounded-md items-center py-5 md:max-w-2xl">
-            <img src="./html.png" alt="HTML logo" className="md:w-18 w-10 -ml-3" />
+            <img
+              src="./html.png"
+              alt="HTML logo"
+              className="md:w-18 w-10 -ml-3"
+            />
             <div className="mt-1">
               <p className="font-bold">Hyper Text Markup Language</p>
-              <p className="md:text-sm text-xs">Questions: 08 | Duration: 15 mins | Submitted on 5 June 2021</p>
+              <p className="md:text-sm text-xs">
+                Questions: 08 | Duration: 15 mins | Submitted on 5 June 2021
+              </p>
             </div>
             <button
               className="px-6 bg-blue-900 hover:bg-blue-500 text-white text-xs py-2.5 cursor-pointer rounded-md"
@@ -120,8 +138,6 @@ export default function DashboardMain({ rank, setRank, score, setScore, percenti
           <StudentChart percentile={percentile} />
         </div>
 
-
-
         {/* Right part */}
 
         <div className="md:mt-22 md:-ml-4 mt-7 flex items-center flex-col gap-y-5">
@@ -129,8 +145,6 @@ export default function DashboardMain({ rank, setRank, score, setScore, percenti
           <QuestionAnalysis />
         </div>
       </div>
-
-
 
       {/* Modal Component */}
 
@@ -150,75 +164,81 @@ export default function DashboardMain({ rank, setRank, score, setScore, percenti
               <div className="flex flex-col">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                    <p className="bg-blue-900 text-white w-6 text-center rounded-xl mr-3">1</p>
-                    <p className="md:text-sm text-xs">Update Your <strong>Rank</strong></p>
+                    <p className="bg-blue-900 text-white w-6 text-center rounded-xl mr-3">
+                      1
+                    </p>
+                    <p className="md:text-sm text-xs">
+                      Update Your <strong>Rank</strong>
+                    </p>
                   </div>
                   <div className="flex flex-col">
+                    <input
+                      type="number"
+                      value={localRank}
+                      onChange={handleRankChange}
+                      className="border p-1 w-36 border-cyan-400 rounded-md"
+                    />
 
-                  <input
-                    type="number"
-                    value={localRank}
-                    onChange={handleRankChange}
-                    className="border p-1 w-36 border-cyan-400 rounded-md"
-                  />
-
-{rankError && <p className="text-xs text-red-500 mt-1">{rankError}</p>}
-
+                    {rankError && (
+                      <p className="text-xs text-red-500 mt-1">{rankError}</p>
+                    )}
                   </div>
-                 
                 </div>
-              
               </div>
 
               {/* Percentile Input */}
               <div className="flex flex-col">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                    <p className="bg-blue-900 w-6 text-white text-center rounded-xl mr-3">2</p>
-                    <p className="md:text-sm text-xs">Update Your <strong>Percentile</strong></p>
+                    <p className="bg-blue-900 w-6 text-white text-center rounded-xl mr-3">
+                      2
+                    </p>
+                    <p className="md:text-sm text-xs">
+                      Update Your <strong>Percentile</strong>
+                    </p>
                   </div>
                   <div className="flex flex-col">
+                    <input
+                      type="number"
+                      value={localPercentile}
+                      onChange={handlePercentileChange}
+                      className="border p-1 w-36 border-cyan-400 rounded-md"
+                    />
 
-                  <input
-                    type="number"
-                    value={localPercentile}
-                    onChange={handlePercentileChange}
-                    className="border p-1 w-36 border-cyan-400 rounded-md"
-                  />
-
-{percentileError && <p className="text-xs text-red-500 ">{percentileError}</p>}
-
+                    {percentileError && (
+                      <p className="text-xs text-red-500 ">{percentileError}</p>
+                    )}
                   </div>
-                  
                 </div>
-               
               </div>
 
               {/* Score Input */}
               <div className="flex flex-col">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                    <p className="bg-blue-900 text-white w-6 text-center rounded-xl mr-3">3</p>
-                    <p className="md:text-sm text-xs">Update Your <strong>Current Score (out of 15)</strong></p>
+                    <p className="bg-blue-900 text-white w-6 text-center rounded-xl mr-3">
+                      3
+                    </p>
+                    <p className="md:text-sm text-xs">
+                      Update Your <strong>Current Score (out of 15)</strong>
+                    </p>
                   </div>
 
                   <div className="flex flex-col">
+                    <input
+                      type="number"
+                      value={localScore}
+                      onChange={handleScoreChange}
+                      className="border p-1 w-36 border-cyan-400 rounded-md"
+                      max={15}
+                      min={1}
+                    />
 
-                  <input
-                    type="number"
-                    value={localScore}
-                    onChange={handleScoreChange}
-                    className="border p-1 w-36 border-cyan-400 rounded-md"
-                    max={15}
-                    min={1}
-                  />
-
-{scoreError && <p className="text-xs text-red-500 mt-1">{scoreError}</p>}
-
+                    {scoreError && (
+                      <p className="text-xs text-red-500 mt-1">{scoreError}</p>
+                    )}
                   </div>
-                
                 </div>
-               
               </div>
             </div>
 
@@ -233,7 +253,6 @@ export default function DashboardMain({ rank, setRank, score, setScore, percenti
               <button
                 disabled={isSaveDisabled}
                 className="flex items-center text-sm font-medium hover:bg-blue-500 text-white bg-blue-900 shadow-neutral-950 inset-shadow-sm cursor-pointer px-5 py-2 rounded-md"
-                
                 onClick={handleSave}
               >
                 save
@@ -244,20 +263,17 @@ export default function DashboardMain({ rank, setRank, score, setScore, percenti
         </div>
       )}
 
-
-<style jsx global>{`
+      <style jsx global>{`
         input[type="number"]::-webkit-inner-spin-button,
         input[type="number"]::-webkit-outer-spin-button {
           -webkit-appearance: none;
           margin: 0;
         }
-        
+
         input[type="number"] {
           -moz-appearance: textfield;
         }
       `}</style>
-
-
     </>
   );
 }

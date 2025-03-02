@@ -2,8 +2,8 @@
 
 import { HiMiniTrophy } from "react-icons/hi2";
 
-export default function QuickStatistics({rank, percentile, score}) {
- console.log(rank)
+export default function QuickStatistics({ rank, percentile, score }) {
+  console.log(rank);
 
   return (
     <div className="border mt-4 text-black p-1.5 py-4 rounded-md border-gray-300 lg:w-[556px]">
@@ -12,7 +12,7 @@ export default function QuickStatistics({rank, percentile, score}) {
       <div className="justify-around gap-x-3 mt-2 flex rounded-md  items-center  ">
         <div className="flex items-center gap-x-3 border-r border-gray-400 p-2">
           <div className="bg-gray-100 p-2 rounded-3xl">
-           <img src="./trophy.svg" alt="trophy_svg" className="w-6"/>
+            <img src="./trophy.svg" alt="trophy_svg" className="w-6" />
           </div>
 
           <div className="flex flex-col">
@@ -23,7 +23,7 @@ export default function QuickStatistics({rank, percentile, score}) {
 
         <div className="flex items-center  gap-x-3 border-r border-gray-400 p-2">
           <div className="bg-gray-100 p-2 rounded-3xl">
-          <img src="./tick.svg" alt="tick_svg" className="w-6"/>
+            <img src="./tick.svg" alt="tick_svg" className="w-6" />
           </div>
 
           <div className="flex flex-col">
@@ -34,7 +34,7 @@ export default function QuickStatistics({rank, percentile, score}) {
 
         <div className="flex items-center  gap-x-3 p-2">
           <div className="bg-gray-100 p-2 rounded-3xl">
-          <img src="./notepad.svg" alt="notepad_svg" className="w-6"/>
+            <img src="./notepad.svg" alt="notepad_svg" className="w-6" />
           </div>
 
           <div className="flex flex-col">
