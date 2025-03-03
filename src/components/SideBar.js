@@ -13,7 +13,7 @@ export default function SideBar() {
       </div>
 
       <div className="bg-gray-100  xl:w-52 md:w-32 xl:-ml-8 md:-ml-2  p-2 md border-r-gray-200 rounded-r-4xl ">
-        <li className=" md:ml-9 lg:ml-0 xl:ml-16 md:p-2 md:flex md:items-center text-blue-700   md:gap-x-3">
+        <li className=" md:ml-9  xl:ml-10 md:p-2 md:flex md:items-center text-blue-700   md:gap-x-3">
           <FiAward size={20} />
           <p className="hidden xl:block">Skill test</p>
         </li>
