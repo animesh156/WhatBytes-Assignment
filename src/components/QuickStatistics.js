@@ -6,7 +6,7 @@ export default function QuickStatistics({ rank, percentile, score }) {
   console.log(rank);
 
   return (
-    <div className="border mt-4 text-black p-1.5 py-4 rounded-md border-gray-300 lg:w-[556px]">
+    <div className="border mt-4 text-black p-1.5 py-4 rounded-md border-gray-300 md:w-[556px]">
       <h1 className="font-bold -mt-3 ml-4">Quick Statistics</h1>
 
       <div className="justify-around gap-x-3 mt-2 flex rounded-md   items-center  ">

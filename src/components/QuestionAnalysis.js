@@ -2,7 +2,7 @@ import RadialProgress from "./RadialProgress";
 
 export default function QuestionAnalysis() {
   return (
-    <div className="border md:h-[335px] h-[300px] mb-3 lg:w-[380px] w-[350px] rounded-md border-gray-300 text-black p-5 gap-y-5  flex flex-col">
+    <div className="border md:h-[335px] h-[300px] mb-3 md:w-[400px]  w-[350px] rounded-md border-gray-300 text-black p-5 gap-y-5  flex flex-col">
       <div className="flex  justify-between">
         <h1 className="font-bold">Question Analysis</h1>
 

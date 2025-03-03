@@ -109,10 +109,10 @@ export default function DashboardMain({
 
   return (
     <>
-      <div className="flex flex-col md:flex-row md:justify-around md:gap-x-2">
+      <div className="flex flex-col items-center xl:-mt-14 xl:flex-row xl:justify-around md:gap-x-2">
         {/* Left part */}
-        <div className="flex flex-col items-center md:items-start md:-ml-4 p-2.5 text-black">
-          <h1 className="mt-4 font-normal">Skill Test</h1>
+        <div className="flex flex-col items-center md:items-start md:-ml-4 p-2.5 xl-p-2 text-black">
+          <h1 className="mt-4 xl:mt-0 font-normal">Skill Test</h1>
 
           <div className="border mt-6 px-2 border-gray-300 justify-around gap-x-2 flex rounded-md items-center py-5 md:max-w-2xl">
             <img
@@ -140,7 +140,7 @@ export default function DashboardMain({
 
         {/* Right part */}
 
-        <div className="md:mt-22 md:-ml-4 mt-7 flex items-center flex-col gap-y-5">
+        <div className="md:mt-22 xl:pt-13 md:-ml-4 mt-7 flex items-center flex-col gap-y-5">
           <SyllabusAnalysis />
           <QuestionAnalysis />
         </div>
