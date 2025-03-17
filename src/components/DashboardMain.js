@@ -142,7 +142,7 @@ export default function DashboardMain({
 
         <div className="md:mt-22 xl:pt-13 md:-ml-4 mt-7 flex items-center flex-col gap-y-5">
           <SyllabusAnalysis />
-          <QuestionAnalysis />
+          <QuestionAnalysis score={score}/>
         </div>
       </div>
 
