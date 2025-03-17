@@ -1,29 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
-export default function RadialProgress() {
-  const progress = 60; // Dynamic progress value
+export default function RadialProgress({ score }) {
+  const progress = Math.round((score / 15) * 100);
 
   return (
-    <div className="relative w-20  m-auto mt-6  ">
-      {" "}
-      {/* Adjusted size */}
-      {/* Background (Gray for remaining 30%) */}
+    <div className="relative w-32 m-auto mt-6">
+      {/* Background Circle */}
       <div
         className="radial-progress text-gray-300 absolute top-0 left-0"
-        style={{ "--value": 100, "--thickness": "18px", "--size": "8rem" }} // Adjusted thickness
+        style={{ "--value": 100, "--thickness": "18px", "--size": "8rem" }}
         role="progressbar"
+        aria-valuenow={100}
+        aria-valuemin={0}
+        aria-valuemax={100}
       ></div>
-      {/* Foreground (Blue for covered 70%) */}
+
+      {/* Foreground Progress */}
       <div
-        className="radial-progress rotate-210 rounded-none  text-blue-500 absolute top-0 left-0"
+        className="radial-progress text-blue-500 absolute top-0 left-0"
         style={{
           "--value": progress,
           "--thickness": "18px",
           "--size": "8rem",
         }}
         aria-valuenow={progress}
-        role="progressbar"
+        aria-valuemin={0}
+        aria-valuemax={100}
       >
-        <img src="./dart.svg" alt="dart_svg" className="w-6 rotate-150" />
+        <img src="./dart.svg" alt="dart" className="w-6" />
       </div>
     </div>
   );
